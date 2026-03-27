@@ -23,3 +23,8 @@ paths:
 
 - kebab-case for files: `element-utils.ts`
 - PascalCase for components: `LayerUI.tsx`
+
+## How to verify
+- Check for class components: `grep -r "extends.*Component" packages/`
+- Check for default exports: `grep -r "^export default" packages/`
+- Check for `any` or `ts-ignore`: `grep -r "any\|@ts-ignore" packages/`

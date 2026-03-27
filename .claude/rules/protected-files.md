@@ -18,3 +18,8 @@ Changes to protected files require:
 1. Full understanding of dependencies
 2. Running complete test suite
 3. Manual QA verification
+
+## How to verify
+- Audit git diff for changes to protected files: `git diff --name-only | grep -E "renderer\.ts|restore\.ts|manager\.ts|types\.ts"`
+- Run full test suite: `yarn test:update`
+- Confirm manual QA sign-off before merging

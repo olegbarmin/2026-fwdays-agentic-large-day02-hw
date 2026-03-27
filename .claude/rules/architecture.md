@@ -21,3 +21,8 @@ paths:
 
 - No new npm packages without explicit approval
 - Check packages/utils/ before adding external helpers
+
+## How to verify
+- Grep for Redux/Zustand/MobX imports: `grep -r "redux\|zustand\|mobx" packages/excalidraw/`
+- Grep for forbidden render libs: `grep -r "react-konva\|fabric\|pixi" packages/excalidraw/`
+- Check state dispatches only via actionManager: `grep -r "setState\b" packages/excalidraw/`
